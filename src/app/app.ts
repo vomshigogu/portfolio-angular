@@ -6,10 +6,11 @@ import { About } from './components/about/about';
 import { Education } from './components/education/education';
 import { Skills } from './components/skills/skills';
 import { Projects } from './components/projects/projects';
+import { Contact } from './components/contact/contact';
 
 @Component({
   selector: 'app-root',
-  imports: [Sidebar,Home,About,Education,Skills,Projects],
+  imports: [Sidebar,Home,About,Education,Skills,Projects,Contact],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
