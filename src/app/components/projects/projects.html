@@ -1,0 +1,105 @@
+<section id = "projects"class="projects-section">
+
+  <h2>Projects</h2>
+
+  <p class="section-subtitle">
+    Real-world applications I built as a Full Stack Developer.
+  </p>
+
+  <!-- PROJECT 1 -->
+  <div class="project-box">
+
+    <div class="project-info">
+
+      <h3>OLC - Online Claims System</h3>
+
+      <p>
+        Financial system for transferring money from credit card to bank account.
+        Built using ASP.NET Core, ADO.NET, SQL Server.
+      </p>
+
+      <div class="tags">
+        <span>C#</span>
+        <span>ADO.NET</span>
+        <span>SQL Server</span>
+        <span>REST API</span>
+      </div>
+
+    </div>
+
+    <!-- SLIDER 1 -->
+    <div class="slider">
+
+      <div class="track" [style.transform]="'translateX(-' + index1 + '00%)'">
+
+        <div class="slide">
+          <img src="projects/olc_homePage.png" (click)="openImage('projects/olc_homePage.png')">
+        </div>
+
+        <div class="slide">
+          <img src="/projects/olc_signin.png" (click)="openImage('/projects/olc_signin.png')">
+        </div>
+
+        <div class="slide">
+          <img src="/projects/payment.png" (click)="openImage('/projects/payment.png')">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-box reverse">
+
+    <div class="project-info">
+
+      <h3>Employee Management System</h3>
+
+      <p>
+        HR system with attendance, leave, payroll and payslips.
+        Built using Angular.
+      </p>
+
+      <div class="tags">
+        <span>Angular</span>
+        <span>TypeScript</span>
+        <span>Bootstrap</span>
+      </div>
+
+    </div>
+
+    <!-- SLIDER 2 -->
+    <div class="slider">
+
+      <div class="track" [style.transform]="'translateX(-' + index2 + '00%)'">
+
+        <div class="slide">
+          <img src="/projects/mytime_home.png" (click)="openImage('projects/mytime_home.png')">
+        </div>
+
+        <div class="slide">
+          <img src="/projects/mytime_login.png" (click)="openImage('projects/mytime_login.png')">
+        </div>
+
+        <div class="slide">
+          <img src="/projects/mytime_leave.png" (click)="openImage('projects/mytime_leave.png')">
+        </div>
+
+        <div class="slide">
+          <img src="/projects/mytime_leavedashboard.png" (click)="openImage('projects/mytime_leavedashboard.png')">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" *ngIf="selectedImage" (click)="closeImage()">
+    <img [src]="selectedImage">
+  </div>
+
+</section>
