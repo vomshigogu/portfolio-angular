@@ -12,7 +12,13 @@
 
     padding: 60px;
 
-    background: #f8fafc;
+    background:
+linear-gradient(
+135deg,
+#f8fafc,
+#eef2ff,
+#dbeafe
+);
 }
 
 .hero-content {
@@ -58,6 +64,13 @@ h2 {
     margin-right: 12px;
 }
 
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+
+    transition: 0.3s;
+}
+
 .btn-primary {
     background: #2563eb;
     color: white;
@@ -66,6 +79,12 @@ h2 {
 .btn-secondary {
     background: white;
     border: 1px solid #d1d5db;
+}
+.btn-secondary:hover {
+
+    transform: translateY(-3px);
+
+    transition: 0.3s;
 }
 
 .hero-cards {
@@ -87,5 +106,40 @@ h2 {
     font-weight: 600;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.1);
+      0 10px 30px rgba(0,0,0,0.1);
+
+    animation: float 4s ease-in-out infinite;
+}
+@keyframes float {
+
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.tech-card:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.tech-card:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.tech-card:nth-child(4) {
+    animation-delay: 3s;
+}
+.tech-card:hover {
+
+    transform: translateY(-10px);
+
+    transition: 0.3s;
+
+    cursor: pointer;
 }
