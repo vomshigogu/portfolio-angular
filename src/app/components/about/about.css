@@ -5,56 +5,97 @@
 
 .about-section {
 
-    min-height: 100vh;
+    padding: 80px 60px;
 
-    padding: 80px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    background: white;
+    background: #ffffff;
 }
 
-.about-content {
-    max-width: 700px;
+.section-tag {
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    display: block;
+
+    margin-bottom: 10px;
 }
 
-.about-content h2 {
+.about-section h2 {
 
-    font-size: 48px;
+    font-size: 36px;
+
+    color: #111827;
 
     margin-bottom: 20px;
 }
 
-.about-content p {
+.about-description {
+
+    max-width: 750px;
 
     font-size: 18px;
 
     line-height: 1.8;
 
     color: #4b5563;
+
+    margin-bottom: 40px;
 }
 
-.about-stats {
+.stats-container {
 
     display: flex;
 
     gap: 20px;
+
+    flex-wrap: wrap;
 }
 
 .stat-card {
 
-    padding: 30px;
+    width: 160px;
 
-    border-radius: 20px;
+    padding: 20px;
 
     background: #f8fafc;
 
-    box-shadow:
-      0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 16px;
 
     text-align: center;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card h3 {
+
+    font-size: 32px;
+
+    color: #2563eb;
+
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+
+    font-size: 14px;
+
+    color: #6b7280;
+
+    margin: 0;
 }
