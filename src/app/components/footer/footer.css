@@ -1,0 +1,18 @@
+.footer {
+  padding: 25px 20px;
+  text-align: center;
+  background: #f8fafc;
+  color: #6b7280;
+  font-size: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* small hover polish (optional subtle) */
+.footer p {
+  margin: 0;
+  transition: 0.3s;
+}
+
+.footer p:hover {
+  color: #111827;
+}
