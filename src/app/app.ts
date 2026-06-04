@@ -7,10 +7,11 @@ import { Education } from './components/education/education';
 import { Skills } from './components/skills/skills';
 import { Projects } from './components/projects/projects';
 import { Contact } from './components/contact/contact';
+import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [Sidebar,Home,About,Education,Skills,Projects,Contact],
+  imports: [Sidebar,Home,About,Education,Skills,Projects,Contact,Footer],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
