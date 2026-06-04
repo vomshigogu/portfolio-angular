@@ -1,0 +1,87 @@
+:host {
+  display: block;
+}
+
+/* FULL SECTION CENTER */
+.contact-section {
+  padding: 100px 40px;
+  background: #f8fafc;
+
+  /* 🔥 THIS IS THE KEY */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TITLE */
+h2 {
+  font-size: 44px;
+  color: #111827;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* SUBTITLE */
+.subtitle {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 700px;
+}
+
+/* GRID CENTERED IN FULL SCREEN */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 750px;
+
+  /* 🔥 center in full page */
+  margin: 0 auto;
+}
+
+/* ITEM */
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #111827;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+/* ICON */
+.contact-item img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+}
+
+/* HOVER */
+.contact-item:hover {
+  color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.contact-item:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
