@@ -1,145 +1,206 @@
 :host {
-    display: block;
-    margin-left: 280px;
+display: block;
+margin-left: 280px;
 }
+
+/* HERO SECTION */
 
 .hero-section {
-    min-height: 100vh;
+min-height: 90vh;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 60px;
 
-    padding: 60px;
+padding: 60px 70px;
 
-    background:
-linear-gradient(
-135deg,
-#f8fafc,
-#eef2ff,
-#dbeafe
+background: linear-gradient(
+    135deg,
+    #f8fafc,
+    #eef2ff,
+    #dbeafe
 );
+
 }
 
+/* LEFT CONTENT */
+
 .hero-content {
-    max-width: 600px;
+max-width: 620px;
 }
 
 .intro {
-    font-size: 20px;
-    color: #6b7280;
+font-size: 18px;
+color: #6b7280;
+margin-bottom: 10px;
 }
 
 h1 {
-    font-size: 60px;
-    margin: 10px 0;
-    color: #111827;
+font-size: 56px;
+font-weight: 800;
+color: #111827;
+margin: 0 0 12px 0;
+line-height: 1.1;
+
 }
 
 h2 {
-    font-size: 30px;
-    color: #2563eb;
-    margin-bottom: 20px;
+font-size: 28px;
+color: #2563eb;
+margin-bottom: 20px;
+font-weight: 700;
+
 }
 
 .description {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #4b5563;
+font-size: 17px;
+line-height: 1.8;
+color: #4b5563;
+
+max-width: 550px;
+
 }
 
+/* BUTTONS */
+
 .hero-buttons {
-    margin-top: 30px;
+margin-top: 35px;
+display: flex;
+gap: 15px;
+
 }
 
 .btn-primary,
 .btn-secondary {
+padding: 13px 26px;
+border-radius: 12px;
+cursor: pointer;
+font-weight: 600;
 
-    padding: 12px 24px;
-    border-radius: 10px;
-    border: none;
+transition: all 0.3s ease;
 
-    cursor: pointer;
-
-    margin-right: 12px;
-}
-
-.btn-primary:hover {
-
-    transform: translateY(-3px);
-
-    transition: 0.3s;
 }
 
 .btn-primary {
-    background: #2563eb;
-    color: white;
+background: #2563eb;
+color: white;
+border: none;
+}
+
+.btn-primary:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 25px rgba(37, 99, 235, 0.25);
 }
 
 .btn-secondary {
-    background: white;
-    border: 1px solid #d1d5db;
+background: white;
+border: 1px solid #d1d5db;
+color: #111827;
 }
+
 .btn-secondary:hover {
-
-    transform: translateY(-3px);
-
-    transition: 0.3s;
+transform: translateY(-3px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
+
+/* RIGHT SIDE CARDS */
 
 .hero-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 180px);
-    gap: 20px;
+display: grid;
+grid-template-columns: repeat(2, 180px);
+gap: 20px;
 }
 
 .tech-card {
+background: white;
+padding: 28px;
+border-radius: 20px;
 
-    background: white;
+text-align: center;
+font-weight: 600;
 
-    padding: 30px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 
-    border-radius: 20px;
+transition: all 0.3s ease;
 
-    text-align: center;
-
-    font-weight: 600;
-
-    box-shadow:
-      0 10px 30px rgba(0,0,0,0.1);
-
-    animation: float 4s ease-in-out infinite;
+animation: float 5s ease-in-out infinite;
 }
+
+.tech-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+cursor: pointer;
+}
+
+/* FLOAT ANIMATION */
+
 @keyframes float {
-
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
+0% {
+transform: translateY(0);
 }
+
+50% {
+    transform: translateY(-8px);
+}
+
+100% {
+    transform: translateY(0);
+}
+
+}
+
 .tech-card:nth-child(2) {
-    animation-delay: 1s;
+animation-delay: 1s;
 }
 
 .tech-card:nth-child(3) {
-    animation-delay: 2s;
+animation-delay: 2s;
 }
 
 .tech-card:nth-child(4) {
-    animation-delay: 3s;
+animation-delay: 3s;
 }
-.tech-card:hover {
 
-    transform: translateY(-10px);
+/* RESPONSIVE */
 
-    transition: 0.3s;
+@media (max-width: 1100px) {
+.hero-section {
+flex-direction: column;
+text-align: center;
+}
+.hero-content {
+    max-width: 100%;
+}
 
-    cursor: pointer;
+.description {
+    max-width: 100%;
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+}
+
+@media (max-width: 768px) {
+:host {
+margin-left: 0;
+}
+
+.hero-section {
+    padding: 50px 25px;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.hero-cards {
+    grid-template-columns: repeat(2, 1fr);
+}
 }

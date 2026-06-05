@@ -1,146 +1,212 @@
 :host {
-  display: block;
-  margin-left: 280px;
+    display: block;
+    margin-left: 280px;
 }
 
 .projects-section {
-  padding: 100px 60px;
-  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+    padding: 80px 70px;
+    background: linear-gradient(135deg, #f8fafc, #eef2ff);
 }
 
 /* TITLE */
-h2 {
-  font-size: 44px;
-  color: #111827;
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
 }
 
 .section-subtitle {
-  color: #6b7280;
-  max-width: 700px;
-  margin-bottom: 60px;
-  font-size: 18px;
+    font-size: 16px;
+    color: #6b7280;
+    max-width: 700px;
+    margin-bottom: 40px;
+    line-height: 1.7;
 }
 
-/* CARD */
+/* PROJECT CARD */
+
 .project-box {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  margin-bottom: 70px;
-  background: white;
-  padding: 30px;
-  border-radius: 24px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
-  overflow: hidden;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+
+    transition: all 0.3s ease;
+
+    overflow: hidden;
 }
 
 .project-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.10);
 }
 
 .project-box.reverse {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 /* INFO */
+
 .project-info {
-  flex: 1;
+    flex: 1;
 }
 
 .project-info h3 {
-  font-size: 26px;
-  margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #111827;
 }
 
 .project-info p {
-  color: #6b7280;
-  line-height: 1.6;
-  margin-bottom: 15px;
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
 /* TAGS */
+
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .tags span {
-  background: #eef2ff;
-  color: #2563eb;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 12px;
+    background: #eef2ff;
+    color: #2563eb;
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
 }
 
-/* SLIDER BOX */
+/* SLIDER */
+
 .slider {
-  flex: 1;
-  height: 260px;
-  overflow: hidden;
-  border-radius: 16px;
-  position: relative;
+    flex: 1;
+
+    height: 240px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    position: relative;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* TRACK (MOVES) */
 .track {
-  display: flex;
-  height: 100%;
-  transition: transform 0.7s ease-in-out;
+    display: flex;
+    height: 100%;
+
+    transition: transform 0.7s ease-in-out;
 }
 
-/* EACH SLIDE */
 .slide {
-  min-width: 100%;
-  height: 260px;
+    min-width: 100%;
+    height: 240px;
 }
 
-/* IMAGE FIT (IMPORTANT) */
 .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
 }
 
 .slide img:hover {
-  transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* LIGHTBOX */
+
 .lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.85);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
 }
 
 .lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-  animation: zoom 0.3s ease;
+    max-width: 90%;
+    max-height: 90%;
+
+    border-radius: 12px;
+
+    animation: zoom 0.3s ease;
 }
 
 @keyframes zoom {
-  from { transform: scale(0.7); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-/* RESPONSIVE */
+/* MOBILE */
+
 @media (max-width: 900px) {
-  .project-box,
-  .project-box.reverse {
-    flex-direction: column;
-  }
+
+    :host {
+        margin-left: 0;
+    }
+
+    .projects-section {
+        padding: 60px 25px;
+    }
+
+    .project-box,
+    .project-box.reverse {
+        flex-direction: column;
+    }
+
+    .slider,
+    .slide {
+        height: 220px;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
 }
