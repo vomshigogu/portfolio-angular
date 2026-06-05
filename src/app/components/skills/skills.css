@@ -1,82 +1,111 @@
-:host{
-    display:block;
-    margin-left:280px;
+:host {
+    display: block;
+    margin-left: 280px;
 }
 
-.skills-section{
-
-    padding:100px 60px;
-
-    background:#ffffff;
+.skills-section {
+    padding: 80px 70px;
+    background: #ffffff;
 }
 
-.section-tag{
+/* TITLE */
 
-    color:#2563eb;
-
-    font-size:12px;
-
-    font-weight:700;
-
-    letter-spacing:3px;
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
 }
 
-.skills-section h2{
-
-    font-size:36px;
-
-    margin:10px 0;
+.section-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    max-width: 700px;
+    margin-bottom: 40px;
+    line-height: 1.7;
 }
 
-.skills-section p{
-
-    color:#6b7280;
-
-    margin-bottom:40px;
+.section-tag {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
 }
 
-.skills-container{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:18px;
+.skills-section h2 {
+    font-size: 36px;
+    margin: 10px 0;
 }
 
-.skill-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:14px 22px;
-
-    border-radius:16px;
-
-    background:#f8fafc;
-
-    border:1px solid #e5e7eb;
-
-    font-weight:600;
-
-    transition:.3s ease;
-}
-.skill-item i{
-
-    font-size:24px;
+.skills-section p {
+    color: #6b7280;
+    margin-bottom: 35px;
 }
 
-.skill-item:hover{
+/* SKILLS */
 
-    transform:translateY(-4px);
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
 
-    background:#201d20;
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-    color:white;
+    padding: 12px 18px;
+
+    border-radius: 14px;
+
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+
+    transition: all 0.3s ease;
+}
+
+.skill-item i {
+    font-size: 20px;
+}
+
+.skill-item:hover {
+    transform: translateY(-4px);
+
+    background: #111827;
+    color: white;
 
     box-shadow:
-      0 10px 25px rgba(37,99,235,.25);
+        0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    :host {
+        margin-left: 0;
+    }
+
+    .skills-section {
+        padding: 60px 25px;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+
+    .skill-item {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    .skill-item i {
+        font-size: 18px;
+    }
 }
