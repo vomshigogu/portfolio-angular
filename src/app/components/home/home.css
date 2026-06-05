@@ -9,16 +9,9 @@ margin-left: 280px;
 position: relative;
 
 
-min-height: 85vh;
+min-height: 70vh;
 
 padding: 100px 80px 80px 40px;
-
-background: linear-gradient(
-    135deg,
-    #f8fafc,
-    #eef2ff,
-    #dbeafe
-);
 
 overflow: hidden;
 
@@ -148,7 +141,7 @@ color: #4b5563;
     position: absolute;
 
     right: 80px;
-    top: 280px;
+    top: 380px;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
