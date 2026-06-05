@@ -1,105 +1,126 @@
-<section id = "projects"class="projects-section">
+<section id="projects" class="projects-section">
 
-  <h2>Projects</h2>
+    <h2 class="section-title"> Projects</h2>
 
-  <p class="section-subtitle">
-    Real-world applications I built as a Full Stack Developer.
-  </p>
+    <p class="section-subtitle">
+        Real-world applications developed using ASP.NET Core, Angular,
+        SQL Server and modern web technologies.
+    </p>
 
-  <!-- PROJECT 1 -->
-  <div class="project-box">
+    <!-- PROJECT 1 -->
 
-    <div class="project-info">
+    <div class="project-box">
 
-      <h3>OLC - Online Claims System</h3>
+        <div class="project-info">
 
-      <p>
-        Financial system for transferring money from credit card to bank account.
-        Built using ASP.NET Core, ADO.NET, SQL Server.
-      </p>
+            <h3>OLC - Online Claims System</h3>
 
-      <div class="tags">
-        <span>C#</span>
-        <span>ADO.NET</span>
-        <span>SQL Server</span>
-        <span>REST API</span>
-      </div>
+            <p>
+                Enterprise financial application designed for secure fund transfers
+                from credit cards to customer bank accounts. Developed backend APIs,
+                transaction workflows, database operations and business logic using
+                ASP.NET Core, C#, ADO.NET and SQL Server while ensuring security,
+                performance and scalability.
+            </p>
+
+            <div class="tags">
+                <span>ASP.NET Core</span>
+                <span>C#</span>
+                <span>ADO.NET</span>
+                <span>SQL Server</span>
+                <span>REST API</span>
+            </div>
+
+        </div>
+
+        <div class="slider">
+
+            <div class="track"
+                [style.transform]="'translateX(-' + index1 + '00%)'">
+
+                <div class="slide">
+                    <img src="projects/olc_homePage.png"
+                         (click)="openImage('projects/olc_homePage.png')">
+                </div>
+
+                <div class="slide">
+                    <img src="/projects/olc_signin.png"
+                         (click)="openImage('/projects/olc_signin.png')">
+                </div>
+
+                <div class="slide">
+                    <img src="/projects/payment.png"
+                         (click)="openImage('/projects/payment.png')">
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-    <!-- SLIDER 1 -->
-    <div class="slider">
+    <!-- PROJECT 2 -->
 
-      <div class="track" [style.transform]="'translateX(-' + index1 + '00%)'">
+    <div class="project-box reverse">
 
-        <div class="slide">
-          <img src="projects/olc_homePage.png" (click)="openImage('projects/olc_homePage.png')">
+        <div class="project-info">
+
+            <h3>My Time</h3>
+
+            <p>
+                HR management platform supporting employee attendance tracking,
+                leave management, payroll processing and payslip generation.
+                Built responsive interfaces using Angular and integrated APIs
+                for real-time employee operations and reporting.
+            </p>
+
+            <div class="tags">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>Bootstrap</span>
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+
         </div>
 
-        <div class="slide">
-          <img src="/projects/olc_signin.png" (click)="openImage('/projects/olc_signin.png')">
-        </div>
+        <div class="slider">
 
-        <div class="slide">
-          <img src="/projects/payment.png" (click)="openImage('/projects/payment.png')">
-        </div>
+            <div class="track"
+                [style.transform]="'translateX(-' + index2 + '00%)'">
 
-      </div>
+                <div class="slide">
+                    <img src="/projects/mytime_home.png"
+                         (click)="openImage('projects/mytime_home.png')">
+                </div>
+
+                <div class="slide">
+                    <img src="/projects/mytime_login.png"
+                         (click)="openImage('projects/mytime_login.png')">
+                </div>
+
+                <div class="slide">
+                    <img src="/projects/mytime_leave.png"
+                         (click)="openImage('projects/mytime_leave.png')">
+                </div>
+
+                <div class="slide">
+                    <img src="/projects/mytime_leavedashboard.png"
+                         (click)="openImage('projects/mytime_leavedashboard.png')">
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </div>
+    <div class="lightbox"
+         *ngIf="selectedImage"
+         (click)="closeImage()">
 
-  <!-- PROJECT 2 -->
-  <div class="project-box reverse">
-
-    <div class="project-info">
-
-      <h3>Employee Management System</h3>
-
-      <p>
-        HR system with attendance, leave, payroll and payslips.
-        Built using Angular.
-      </p>
-
-      <div class="tags">
-        <span>Angular</span>
-        <span>TypeScript</span>
-        <span>Bootstrap</span>
-      </div>
+        <img [src]="selectedImage">
 
     </div>
-
-    <!-- SLIDER 2 -->
-    <div class="slider">
-
-      <div class="track" [style.transform]="'translateX(-' + index2 + '00%)'">
-
-        <div class="slide">
-          <img src="/projects/mytime_home.png" (click)="openImage('projects/mytime_home.png')">
-        </div>
-
-        <div class="slide">
-          <img src="/projects/mytime_login.png" (click)="openImage('projects/mytime_login.png')">
-        </div>
-
-        <div class="slide">
-          <img src="/projects/mytime_leave.png" (click)="openImage('projects/mytime_leave.png')">
-        </div>
-
-        <div class="slide">
-          <img src="/projects/mytime_leavedashboard.png" (click)="openImage('projects/mytime_leavedashboard.png')">
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" *ngIf="selectedImage" (click)="closeImage()">
-    <img [src]="selectedImage">
-  </div>
 
 </section>
