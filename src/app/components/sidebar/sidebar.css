@@ -1,7 +1,7 @@
 .sidebar {
     width: 280px;
     height: 100vh;
-    background: #111827;
+    background: #17233e;
     color: white;
     position: fixed;
     left: 0;
@@ -83,7 +83,7 @@ li a {
     font-size: 18px;
     font-weight: 500;
 
-    padding: 12px 18px;
+    padding: 10px 18px;
     border-radius: 10px;
 
     transition: all 0.3s ease;
