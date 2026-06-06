@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class Sidebar {
 
+activeLink = 'home';
+
+setActive(link: string) {
+  this.activeLink = link;
+}
+
 }
