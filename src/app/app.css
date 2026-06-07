@@ -1,0 +1,34 @@
+.mobile-header {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 60px;
+
+  padding: 0 15px;
+  box-sizing: border-box; /* important */
+
+  background: #000;
+  color: white;
+}
+  .menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+
+  margin-right: 5px;
+}
+}

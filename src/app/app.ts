@@ -11,10 +11,21 @@ import { Footer } from './components/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [Sidebar,Home,About,Education,Skills,Projects,Contact,Footer],
+  imports: [Sidebar,Home,About,Education,Skills,Projects,Contact,Footer,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('portfolio-app');
+
+  isSidebarOpen = false;
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+    console.log(this.isSidebarOpen);
+  }
+
+  closeSidebar() {
+    this.isSidebarOpen = false;
+  }
 }
